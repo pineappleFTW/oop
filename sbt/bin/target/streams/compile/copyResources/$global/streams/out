@@ -1,0 +1,12 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\.DS_Store,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\.DS_Store)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\.DS_Store,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\.DS_Store)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery\.DS_Store,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery\.DS_Store)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery\address,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery\address)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery\address\.DS_Store,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery\address\.DS_Store)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery\address\view,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery\address\view)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery\address\view\BankAccountOverview.fxml,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery\address\view\BankAccountOverview.fxml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery\address\view\BankAccountSoloview.fxml,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery\address\view\BankAccountSoloview.fxml)[0m
+[0m[[0mdebug[0m] [0m	(C:\Users\lisheng\Desktop\banksystem\sbt\bin\src\main\resources\ch\makery\address\view\RootLayout.fxml,C:\Users\lisheng\Desktop\banksystem\sbt\bin\target\scala-2.11\classes\ch\makery\address\view\RootLayout.fxml)[0m
