@@ -14,11 +14,19 @@ project/plugins/project/
 
 # Scala-IDE specific
 .scala_dependencies
-.worksheet
+.worksheet\
+
+# Eclipse
+build
+.classpath
+.project
+.settings
+org.scala-ide.sdt.core/META-INF/MANIFEST.MF
+org.scala-ide.sdt.update-site/site.xml`
 
 # ENSIME specific
 .ensime_cache/
 .ensime
 
-#
+# Misc
 .DS_Store

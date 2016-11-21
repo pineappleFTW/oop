@@ -1,11 +1,7 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\.DS_Store,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\.DS_Store)[0m
 [0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch)[0m
-[0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\.DS_Store,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\.DS_Store)[0m
 [0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\makery,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\makery)[0m
-[0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\makery\.DS_Store,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\makery\.DS_Store)[0m
 [0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\makery\address,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\makery\address)[0m
-[0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\makery\address\.DS_Store,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\makery\address\.DS_Store)[0m
 [0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\makery\address\view,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\makery\address\view)[0m
 [0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\makery\address\view\BankAccountEditDialog.fxml,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\makery\address\view\BankAccountEditDialog.fxml)[0m
 [0m[[0mdebug[0m] [0m	(E:\Eclipse\oop\sbt\bin\src\main\resources\ch\makery\address\view\BankAccountOverview.fxml,E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes\ch\makery\address\view\BankAccountOverview.fxml)[0m
