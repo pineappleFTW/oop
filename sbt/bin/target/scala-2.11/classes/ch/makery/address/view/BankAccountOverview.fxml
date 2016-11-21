@@ -8,23 +8,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.BankAccountOverviewController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" styleClass="background" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.BankAccountOverviewController">
    <children>
-      <Label layoutX="-18.0" layoutY="14.0" text="List of Accounts" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <Label layoutX="20.0" layoutY="14.0" prefWidth="800.0" styleClass="header" text="Bank Account Management System" textFill="#1165e4" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <ButtonBar layoutX="328.0" layoutY="246.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+      <ButtonBar layoutX="328.0" layoutY="246.0" prefHeight="40.0" prefWidth="790.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
         <buttons>
-          <Button mnemonicParsing="false" text="New" />
-            <Button layoutX="135.0" layoutY="15.0" mnemonicParsing="false" text="Update" />
+          <Button mnemonicParsing="false" onAction="#handleNewBankAccount" prefHeight="33.0" prefWidth="228.0" text="New" />
+            <Button layoutX="135.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleEditBankAccount" text="Update" />
             <Button layoutX="50.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleDeleteAccount" text="Remove" />
             <Button layoutX="115.0" layoutY="15.0" mnemonicParsing="false" onAction="#showSoloBankInfo" text="Details" />
+            <Button layoutX="30.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleTransaction" prefHeight="31.0" prefWidth="130.0" text="Transaction" />
         </buttons>
       </ButtonBar>
-      <TableView fx:id="bankAccountTable" layoutX="5.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <TableView fx:id="bankAccountTable" layoutX="5.0" layoutY="43.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0">
         <columns>
+            <TableColumn fx:id="accountNumberColumn" prefWidth="75.0" text="Account Number" />
           <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First Name" />
           <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last Name" />
             <TableColumn fx:id="accountBalanceColumn" prefWidth="75.0" text="Account Balance" />

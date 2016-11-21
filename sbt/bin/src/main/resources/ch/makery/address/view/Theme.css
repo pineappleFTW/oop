@@ -1,0 +1,162 @@
+@font-face{
+	font-family:Roboto;
+	src:url(Roboto-Regular.ttf);
+}
+
+@font-face{
+	font-family:Fjalla One;
+	src:url(FjallaOne-Regular.ttf);
+}
+
+@font-face{
+	font-family:Raleway Regular;
+	src:url(Raleway-Regular.ttf);
+}
+
+@font-face{
+	font-family:Raleway Medium;
+	src:url(Raleway-Medium.ttf);
+}
+
+@font-face{
+	font-family:Raleway SemiBold;
+	src:url(Raleway-SemiBold.ttf);
+}
+
+.background {
+    -fx-background-color: #E0E0E0;
+}
+
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Raleway Medium";
+    -fx-text-fill: black;
+}
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-font-family: "Raleway Medium";
+    -fx-control-inner-background: #E0E0E0;
+    -fx-background-color: #E0E0E0;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 15;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Fjalla One";
+    -fx-text-fill: #212121;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+
+.menu-bar {
+    -fx-background-color: derive(#212121,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#212121,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Raleway Medium";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Raleway Medium";
+}
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color: #BDBDBD;
+    -fx-font-family: "Fjalla One";
+    -fx-font-size: 11pt;
+    -fx-text-fill: #212121;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #EEEEEE;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.header {
+	-fx-font-family: "Fjalla One";
+	-fx-font-size: 16pt;
+	-fx-text-fill: #212121;
+}
+
+.soloViewLabel {
+	-fx-font-family: "Fjalla One";
+	-fx-font-size: 12pt;
+}
+
+.transactionViewLabel {
+	-fx-font-family: "Fjalla One";
+	-fx-font-size: 12pt;
+}
+
+.editViewLabel {
+	-fx-font-family: "Fjalla One";
+	-fx-font-size: 12pt;
+}

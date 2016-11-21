@@ -15,10 +15,15 @@ addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0" cross CrossVersion.fu
 libraryDependencies ++= Seq(
   "org.scalafx" %% "scalafx" % "8.0.40-R8",
   "org.scalafx" %% "scalafxml-core-sfx8" % "0.2.2",
-  "com.github.nscala-time" %% "nscala-time" % "2.12.0"
+  "com.github.nscala-time" %% "nscala-time" % "2.12.0",
+  "org.scalikejdbc" %% "scalikejdbc"       % "2.5.0",
+  "com.h2database"  %  "h2"                % "1.4.193",
+  "ch.qos.logback"  %  "logback-classic"   % "1.1.7",
+  "org.apache.derby" % "derby" % "10.13.1.1"
+
 )
 
-mainClass in assembly := Some("hep88.Boom")
+mainClass in assembly := Some("ch.makery.address.MainApp")
 
 EclipseKeys.executionEnvironment := Some(EclipseExecutionEnvironment.JavaSE18)
 

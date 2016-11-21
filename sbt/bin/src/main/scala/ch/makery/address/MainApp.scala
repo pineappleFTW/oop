@@ -9,21 +9,24 @@ import scalafx.collections.{ObservableBuffer}
 import ch.makery.address.model.{BankAccount, BasicBankAccount,PrivilegeBankAccount}
 import scalafx.stage.{ Stage, Modality }
 import ch.makery.address.view.BankAccountSoloviewController
+import ch.makery.address.view.BankAccountEditDialogController
+import ch.makery.address.view.BankAccountTransactionController
 import scalafx.event.ActionEvent
 
 
-object MainApp extends JFXApp {
+object MainApp extends JFXApp{
   // the data as an observable list of Persons
   val bankAccountData = new ObservableBuffer[BankAccount]()
   
-    bankAccountData += new PrivilegeBankAccount("Hans", "Muster",50.0)
-    bankAccountData += new BasicBankAccount("Ruth", "Mueller",100.0)
-    bankAccountData += new BankAccount("Heinz", "Kurz",100.0)
-    bankAccountData += new BankAccount("Cornelia", "Meier",200.0)
-    bankAccountData += new BankAccount("Dockey", "Kong",2002.0)
-    bankAccountData += new BankAccount("Hello123", "hahaha",234300.0)
-    bankAccountData += new BankAccount("Corscaskia", "Measclier",2020.0)
-    bankAccountData += new BankAccount("Cor", "Cassdsy",1230.0)
+    bankAccountData += new PrivilegeBankAccount("Jerry", "Lee",20,"Taman Seraya",53050.0)
+    bankAccountData += new BasicBankAccount("Mun Chun", "Looi",25,"Taman Midah",2000.0)
+    bankAccountData += new BasicBankAccount("Shaun", "Lim",33,"Taman Midah",1500.0)
+    bankAccountData += new PrivilegeBankAccount("Rynn", "Leow",40,"Taman Lensen",70000.0)
+    bankAccountData += new PrivilegeBankAccount("Danny", "Lim",34,"Taman Bukit Segar",60002.0)
+    bankAccountData += new PrivilegeBankAccount("Ken", "Yeoh",50,"Alam Damai",53300.0)
+    bankAccountData += new BasicBankAccount("Bi Lian", "Loi",21,"Taman Desa Aman",2020.0)
+    bankAccountData += new PrivilegeBankAccount("Ronny", "Ko",35,"Tun Hussein Onn",132000.0)
+    bankAccountData += new PrivilegeBankAccount("Dash", "Chong",23,"Taman Midah",142000.0)
   
     val rootResource = getClass.getResource("view/RootLayout.fxml")
     val loader = new FXMLLoader(rootResource, NoDependencyResolver)
@@ -65,6 +68,48 @@ object MainApp extends JFXApp {
       
     }
     
+    def showBankAccountEditDialog(bankAccount: BankAccount): Boolean = {
+    val resource = getClass.getResource("view/BankAccountEditDialog.fxml")
+    val loader = new FXMLLoader(resource, NoDependencyResolver)
+    loader.load();
+    val roots2  = loader.getRoot[jfxs.Parent]
+    val control2 = loader.getController[BankAccountEditDialogController#Controller]
+
+    val dialog = new Stage() {
+      initModality(Modality.APPLICATION_MODAL)
+      initOwner(stage)
+      scene = new Scene {
+        root = roots2
+      }
+    }
+    control2.dialogStage = dialog
+    control2.bankAccount=bankAccount
+    dialog.showAndWait()
+    control2.okClicked
+  }
+    
+    
+    def showBankAccountTransactionDialog(bankAccount: BankAccount): Boolean = {
+    val resource = getClass.getResource("view/BankAccountTransactionOverview.fxml")
+    val loader = new FXMLLoader(resource, NoDependencyResolver)
+    loader.load();
+    val roots2  = loader.getRoot[jfxs.Parent]
+    val control3= loader.getController[BankAccountTransactionController#Controller]
+
+    val dialog = new Stage() {
+      initModality(Modality.APPLICATION_MODAL)
+      initOwner(stage)
+      scene = new Scene {
+        root = roots2
+      }
+    }
+    control3.dialogStage = dialog
+    control3.bankAccount=bankAccount
+    dialog.showAndWait()
+    control3.okClicked
+  } 
+    
     showBankAccountOverview()
+    
     
 }

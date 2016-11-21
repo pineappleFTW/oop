@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.BankAccountTransactionController">
+   <children>
+      <GridPane layoutX="159.0" layoutY="94.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label styleClass="transactionViewLabel" text="First Name" GridPane.rowIndex="1" />
+            <Label styleClass="transactionViewLabel" text="Account Balance" GridPane.rowIndex="3" />
+            <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="balanceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label styleClass="transactionViewLabel" text="Last name" GridPane.rowIndex="2" />
+            <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label styleClass="transactionViewLabel" text="Account Number" />
+            <Label fx:id="accountNumberLabel" layoutX="10.0" layoutY="15.0" text="Label" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label styleClass="header" text="Transaction Details" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="100.0" layoutY="200.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="10.0" />
+      <ButtonBar layoutX="390.0" layoutY="354.0" prefHeight="40.0" prefWidth="247.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#handleOkButton" prefHeight="34.0" prefWidth="127.0" text="OK" />
+            <Button layoutX="135.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+    <Button layoutX="14.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleDepositButton" prefHeight="34.0" prefWidth="117.0" text="Deposit" />
+      <Button layoutX="14.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleWithdrawButton" prefHeight="34.0" prefWidth="117.0" text="Withdraw" />
+      <TextField fx:id="depositField" layoutX="147.0" layoutY="266.0" prefHeight="32.0" prefWidth="191.0" />
+      <TextField fx:id="withdrawField" layoutX="147.0" layoutY="313.0" prefHeight="22.0" prefWidth="191.0" />
+      <Button layoutX="14.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleTransferButton" prefHeight="19.0" prefWidth="117.0" text="Transfer" />
+      <TextField fx:id="transferField" layoutX="147.0" layoutY="221.0" prefHeight="12.0" prefWidth="191.0" />
+      <Label layoutX="408.0" layoutY="191.0" text="Account Number" />
+      <Label layoutX="203.0" layoutY="191.0" text="Amount" />
+      <TextField fx:id="accNumField" layoutX="377.0" layoutY="221.0" prefHeight="12.0" prefWidth="191.0" />
+   </children>
+</AnchorPane>

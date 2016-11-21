@@ -1,22 +1,34 @@
 package ch.makery.address.model
 
+import ch.makery.address.MainApp
 import scalafx.beans.property.{StringProperty, IntegerProperty, ObjectProperty,DoubleProperty,BooleanProperty}
 import java.time.LocalDate;
+import scala.util.Random
 
-class BankAccount(firstNameS:String,lastNameS:String,balanceS:Double){
+abstract class BankAccount(firstNameS:String,lastNameS:String,ageS:Int,addressS:String,balanceS:Double){
+  var accountNum=ObjectProperty[Int](generateAccountNum)
   var firstName=new StringProperty(firstNameS)
   var lastName=new StringProperty(lastNameS)
-  var age= ObjectProperty[Int](0)
-  var address=new StringProperty("Some road")
-  var interestRate= ObjectProperty[Double](0)
+  var age= ObjectProperty[Int](ageS)
+  var address=new StringProperty(addressS)
+  val interestRate:ObjectProperty[Double]
   var balance= ObjectProperty[Double](balanceS)
-  var isActive= BooleanProperty(true)
-  var accountType= new StringProperty(isAccountPremium(balanceS))
+  val accountType:StringProperty
   
-  def isAccountPremium(bal:Double):String={
-    if (bal>50000){
-      return "Premium"
-    }else
-      return "Basic"
+ def generateAccountNum:Int={
+    
+    var rand=0
+    while(rand<1000){
+      rand=new Random().nextInt(10000)
+      for(x<-MainApp.bankAccountData){
+        if(x.accountNum==rand){
+          rand=new Random().nextInt(10000)
+        }
+      }
+    }
+    
+    
+    return rand
   }
+  
 }
