@@ -6,9 +6,9 @@ import java.time.format.DateTimeParseException;
 
 object DateUtil {
   val DATE_PATTERN = "dd.MM.yyyy"
-  val DATE_FORMATTER =  DateTimeFormatter.ofPattern(DATE_PATTERN)
+  val DATE_FORMATTER = DateTimeFormatter.ofPattern(DATE_PATTERN)
   
-  implicit class DateFormater (val date : LocalDate){
+  implicit class DateFormater(val date: LocalDate){
 
      /**
      * Returns the given date as a well formatted String. The above defined 
@@ -17,14 +17,14 @@ object DateUtil {
      * @param date the date to be returned as a string
      * @return formatted string
      */
-     def asString : String = {
+     def asString: String = {
         if (date == null) {
             return null;
         }
         return DATE_FORMATTER.format(date);
     }
   }
-  implicit class StringFormater (val data : String) {
+  implicit class StringFormater(val data: String) {
         /**
      * Converts a String in the format of the defined {@link DateUtil#DATE_PATTERN} 
      * to a {@link LocalDate} object.
@@ -34,14 +34,14 @@ object DateUtil {
      * @param dateString the date as String
      * @return the date object or null if it could not be converted
      */
-    def parseLocalDate : LocalDate = {
+    def parseLocalDate: LocalDate = {
         try {
           LocalDate.parse(data, DATE_FORMATTER)
         } catch {
-          case  e: DateTimeParseException => null
+          case e: DateTimeParseException => null
         }
     }
-    def isValid : Boolean = {
+    def isValid: Boolean = {
       data.parseLocalDate != null
     }
   }
