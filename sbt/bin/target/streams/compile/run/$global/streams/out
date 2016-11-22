@@ -1,2 +1,20 @@
 [0m[[0mdebug[0m] [0mjavaOptions: List()[0m
 [0m[[0minfo[0m] [0mRunning ch.makery.address.MainApp [0m
+[0m[[0minfo[0m] [0m01:14:26.592 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Registering Scala Conversions.[0m
+[0m[[0minfo[0m] [0m01:14:26.594 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Deserializers for Scala Conversions registering[0m
+[0m[[0minfo[0m] [0m01:14:26.594 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Serializers for Scala Conversions registering[0m
+[0m[[0minfo[0m] [0m01:14:26.594 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting up OptionSerializer[0m
+[0m[[0minfo[0m] [0m01:14:26.599 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting up ScalaProductSerializer[0m
+[0m[[0minfo[0m] [0m01:14:26.599 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting up ScalaCollectionSerializer[0m
+[0m[[0minfo[0m] [0m01:14:26.600 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Setting up ScalaRegexSerializers[0m
+[0m[[0minfo[0m] [0m01:14:26.600 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Hooking up scala.util.matching.Regex serializer[0m
+[0m[[0minfo[0m] [0m01:14:26.600 [JavaFX Application Thread] DEBUG c.m.c.c.c.s.RegisterConversionHelpers$ - Reached base registration method on MongoConversionHelper.[0m
+[0m[[0minfo[0m] [0m01:14:26.696 [JavaFX Application Thread] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}[0m
+[0m[[0minfo[0m] [0m01:14:26.750 [JavaFX Application Thread] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING}][0m
+[0m[[0minfo[0m] [0m01:14:26.774 [cluster-ClusterId{value='58347cf2e0b2c727748b99c5', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:5}] to localhost:27017[0m
+[0m[[0minfo[0m] [0m01:14:26.774 [cluster-ClusterId{value='58347cf2e0b2c727748b99c5', description='null'}-localhost:27017] DEBUG org.mongodb.driver.cluster - Checking status of localhost:27017[0m
+[0m[[0minfo[0m] [0m01:14:26.775 [cluster-ClusterId{value='58347cf2e0b2c727748b99c5', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 2, 11]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=395142}[0m
+[0m[[0minfo[0m] [0m01:14:26.776 [cluster-ClusterId{value='58347cf2e0b2c727748b99c5', description='null'}-localhost:27017] DEBUG org.mongodb.driver.cluster - Updating cluster description to  {type=STANDALONE, servers=[{address=localhost:27017, type=STANDALONE, roundTripTime=0.4 ms, state=CONNECTED}][0m
+[0m[[0minfo[0m] [0m01:14:26.782 [JavaFX Application Thread] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:6}] to localhost:27017[0m
+[0m[[0minfo[0m] [0m01:14:26.787 [JavaFX Application Thread] DEBUG org.mongodb.driver.protocol.command - Sending command {find : BsonString{value='BankAccount'}} to database myBankAccount on connection [connectionId{localValue:2, serverValue:6}] to server localhost:27017[0m
+[0m[[0minfo[0m] [0m01:14:26.790 [JavaFX Application Thread] DEBUG org.mongodb.driver.protocol.command - Command execution completed[0m

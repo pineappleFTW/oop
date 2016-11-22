@@ -5,8 +5,9 @@ import scalafx.beans.property.{StringProperty, IntegerProperty, ObjectProperty,D
 import java.time.LocalDate;
 import scala.util.Random
 
-abstract class BankAccount(firstNameS: String, lastNameS: String, ageS: Int, addressS: String, balanceS: Double){
-  var accountNum = ObjectProperty[Int](generateAccountNum)
+abstract class BankAccount(accountNumS:Int, firstNameS: String, lastNameS: String, ageS: Int, addressS: String, balanceS: Double) {
+  
+  var accountNum = ObjectProperty[Int](accountNumS)
   var firstName = new StringProperty(firstNameS)
   var lastName = new StringProperty(lastNameS)
   var age = ObjectProperty[Int](ageS)
@@ -15,12 +16,16 @@ abstract class BankAccount(firstNameS: String, lastNameS: String, ageS: Int, add
   var balance = ObjectProperty[Double](balanceS)
   val accountType: StringProperty
   
- def generateAccountNum: Int = {
+}
+
+object BankAccount {
+  
+  def generateAccountNum: Int = {
     var rand = 0
-    while (rand < 1000) {
+    while (rand < 1000){
       rand = new Random().nextInt(10000)
       for (x <- MainApp.bankAccountData) {
-        if (x.accountNum == rand) {
+        if (x.accountNum == rand){
           rand = new Random().nextInt(10000)
         }
       }
