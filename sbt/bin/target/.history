@@ -32,20 +32,6 @@ run
 compile
 run
 compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
-run
-compile
 compiel
 compile
 run
@@ -498,3 +484,17 @@ compile
 sbt
 exit
 import ch.makery.address.model.BankAccount
+exit
+sbt console
+exit
+compile
+eclipse
+sbt
+exit
+sbt
+exit
+eclipse
+run
+exit
+eclipse
+run

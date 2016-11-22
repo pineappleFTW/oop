@@ -5,11 +5,11 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 object DateUtil {
+  
   val DATE_PATTERN = "dd.MM.yyyy"
   val DATE_FORMATTER = DateTimeFormatter.ofPattern(DATE_PATTERN)
   
   implicit class DateFormater(val date: LocalDate){
-
      /**
      * Returns the given date as a well formatted String. The above defined 
      * {@link DateUtil#DATE_PATTERN} is used.
@@ -24,8 +24,9 @@ object DateUtil {
         return DATE_FORMATTER.format(date);
     }
   }
+  
   implicit class StringFormater(val data: String) {
-        /**
+     /**
      * Converts a String in the format of the defined {@link DateUtil#DATE_PATTERN} 
      * to a {@link LocalDate} object.
      * 
@@ -45,4 +46,5 @@ object DateUtil {
       data.parseLocalDate != null
     }
   }
+  
 }

@@ -13,12 +13,13 @@ import ch.makery.address.view.BankAccountSoloviewController
 import ch.makery.address.view.BankAccountEditDialogController
 import ch.makery.address.view.BankAccountTransactionController
 import scalafx.event.ActionEvent
+import com.mongodb.casbah.Imports._
 
 object MainApp extends JFXApp {
-  // the data as an observable list of Persons
-  val bankAccountData = new ObservableBuffer[BankAccount]()
   
-  bankAccountData += new PrivilegeBankAccount("Jerry", "Lee", 20, "Taman Seraya", 53050.0)
+  // dummy data
+  /*
+	bankAccountData += new PrivilegeBankAccount("Jerry", "Lee", 20, "Taman Seraya", 53050.0)
   bankAccountData += new BasicBankAccount("Mun Chun", "Looi", 25, "Taman Midah", 2000.0)
   bankAccountData += new BasicBankAccount("Shaun", "Lim", 33, "Taman Midah", 1500.0)
   bankAccountData += new PrivilegeBankAccount("Rynn", "Leow", 40, "Taman Lensen", 70000.0)
@@ -27,7 +28,38 @@ object MainApp extends JFXApp {
   bankAccountData += new BasicBankAccount("Bi Lian", "Loi", 21, "Taman Desa Aman", 2020.0)
   bankAccountData += new PrivilegeBankAccount("Ronny", "Ko", 35, "Tun Hussein Onn", 132000.0)
   bankAccountData += new PrivilegeBankAccount("Dash", "Chong", 23, "Taman Midah", 142000.0)
+  */
 
+  // Database
+  val mongoClient: MongoClient = MongoClient("localhost", 27017)
+  val database: MongoDB = mongoClient("myBankAccount")
+  val bankAccountCollection = database("BankAccount")
+  var allAccount = bankAccountCollection.find()
+  // Observable list of BankAccount
+  val bankAccountData = new ObservableBuffer[BankAccount]()
+  
+  for(x <- allAccount){
+    if(x.get("accountType").toString.equals("Premium")){
+      val privAccount = new PrivilegeBankAccount(
+          accountNum = x.get("accountNum").toString.toInt,
+          firstName = x.get("firstName").toString,
+          lastName = x.get("lastName").toString,
+          age = x.get("age").toString.toInt,
+          address = x.get("address").toString,
+          balance = x.get("balance").toString.toDouble)
+      bankAccountData += privAccount
+    } else {
+      val basicAccount = new BasicBankAccount(
+          accountNum = x.get("accountNum").toString.toInt,
+          firstName = x.get("firstName").toString,
+          lastName = x.get("lastName").toString,
+          age = x.get("age").toString.toInt,
+          address = x.get("address").toString,
+          balance = x.get("balance").toString.toDouble)
+      bankAccountData += basicAccount
+    }
+  }
+  
   val rootResource = getClass.getResource("view/RootLayout.fxml")
   val loader = new FXMLLoader(rootResource, NoDependencyResolver)
   loader.load();

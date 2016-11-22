@@ -6,6 +6,7 @@ import scalafx.scene.control.{TableView,TableColumn,Label,TextField,Alert}
 import scalafxml.core.macros.sfxml
 import scalafx.stage.Stage
 import scalafx.event.ActionEvent
+import com.mongodb.casbah.Imports._
 
 @sfxml
 class BankAccountTransactionController(
@@ -46,7 +47,7 @@ class BankAccountTransactionController(
       val alert = new Alert(Alert.AlertType.Warning){
         initOwner(MainApp.stage)
         title="No such account in database "
-        headerText="Account not found "
+        headerText="Account not found"
         contentText= "Please create this account"
         }.showAndWait()
     } else {
@@ -54,11 +55,21 @@ class BankAccountTransactionController(
         if (_bankAccount.balance.value - transferField.text.value.toDouble >= 0) {
           _bankAccount.balance.value = _bankAccount.balance.value - transferField.text.value.toDouble
           selectedBankAccount.balance.value = selectedBankAccount.balance.value + transferField.text.value.toDouble
+          val query = MongoDBObject("accountNum" -> selectedBankAccount.accountNum.value)
+          val transactionEntry = MongoDBObject(
+              "accountNum" -> selectedBankAccount.accountNum.value,
+              "firstName" -> selectedBankAccount.firstName.value,
+              "lastName" -> selectedBankAccount.lastName.value,
+              "age" -> selectedBankAccount.age.value,
+              "address" -> selectedBankAccount.address.value,
+              "balance" -> selectedBankAccount.balance.value,
+              "accountType" -> selectedBankAccount.accountType.value)
+          val result = MainApp.bankAccountCollection.update(query, transactionEntry)
         } else {
           val alert = new Alert(Alert.AlertType.Warning){
             initOwner(MainApp.stage)
             title = "Insufficient Balance to carry out transfer"
-            headerText = "Insufficient Balance "
+            headerText = "Insufficient Balance"
             contentText = "Insufficient Balance in account"
           }.showAndWait()
         }
