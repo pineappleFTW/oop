@@ -30,8 +30,6 @@ run
 compile
 run
 compile
-run
-compile
 compiel
 compile
 run
@@ -497,4 +495,6 @@ eclipse
 run
 exit
 eclipse
+run
+exit
 run

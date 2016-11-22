@@ -12,6 +12,7 @@ import scalafx.stage.{ Stage, Modality }
 import ch.makery.address.view.BankAccountSoloviewController
 import ch.makery.address.view.BankAccountEditDialogController
 import ch.makery.address.view.BankAccountTransactionController
+import ch.makery.address.view.BankAccountDeleteDialogController
 import scalafx.event.ActionEvent
 import com.mongodb.casbah.Imports._
 
@@ -138,6 +139,27 @@ object MainApp extends JFXApp {
     control3.bankAccount = bankAccount
     dialog.showAndWait()
     control3.okClicked
-  } 
+  }
+  
+  def showBankAccountDeleteDialog(bankAccount: BankAccount): Boolean = {
+    val resource = getClass.getResource("view/BankAccountDeleteDialog.fxml")
+    val loader = new FXMLLoader(resource, NoDependencyResolver)
+    loader.load();
+    val roots2 = loader.getRoot[jfxs.Parent]
+    val control4 = loader.getController[BankAccountDeleteDialogController#Controller]
+    
+    val dialog = new Stage() {
+      initModality(Modality.APPLICATION_MODAL)
+      initOwner(stage)
+      scene = new Scene {
+        root = roots2
+      }
+    }
+    control4.dialogStage = dialog
+    control4.bankAccount = bankAccount
+    dialog.showAndWait()
+    control4.okClicked
+  }
+
   showBankAccountOverview()
 }

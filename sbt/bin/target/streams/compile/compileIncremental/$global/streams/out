@@ -2,32 +2,48 @@
 [0m[[0mdebug[0m] [0m[naha] Initial source changes: [0m
 [0m[[0mdebug[0m] [0m[naha] 	removed:Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	added: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] 	modified: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountOverviewController.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] 	modified: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala, E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] Invalidated products: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] External API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] Modified binary dependencies: Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountOverviewController.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial directly invalidated sources: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala, E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] [0m
 [0m[[0mdebug[0m] [0m[naha] Sources indirectly invalidated by:[0m
 [0m[[0mdebug[0m] [0m[naha] 	product: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m[naha] 	external source: Set()[0m
-[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountOverviewController.scala)[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountOverviewController.scala)[0m
-[0m[[0minfo[0m] [0mCompiling 1 Scala source to E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes...[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala, E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala, E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 2 Scala sources to E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes...[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.12:component from component compiler for Scala 2.11.8[0m
 [0m[[0mdebug[0m] [0mGetting org.scala-sbt:compiler-interface:0.13.12:component from component compiler for Scala 2.11.8[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 1cb38752, interfacing (CompilerInterface) with Scala compiler version 2.11.8[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 5b7e597d, interfacing (CompilerInterface) with Scala compiler version 2.11.8[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-Xplugin:C:\Users\Haolun\.ivy2\cache\org.scalamacros\paradise_2.11.8\jars\paradise_2.11.8-2.1.0.jar[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre1.8.0_112\lib\resources.jar;C:\Program Files\Java\jre1.8.0_112\lib\rt.jar;C:\Program Files\Java\jre1.8.0_112\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_112\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_112\lib\jce.jar;C:\Program Files\Java\jre1.8.0_112\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_112\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_112\classes;C:\Users\Haolun\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.8.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	E:\Eclipse\oop\sbt\bin\target\scala-2.11\classes;E:\Eclipse\oop\sbt\bin\lib\paradise_2.11.8-2.1.0.jar;E:\Eclipse\oop\sbt\bin\lib\scalafxml-core-macros-sfx8_2.11-0.2.2.jar;E:\Eclipse\oop\sbt\bin\lib\scalafxml-core-sfx8_2.11-0.2.2.jar;E:\Eclipse\oop\sbt\bin\lib\scalafx_2.11-8.0.40-R8.jar;E:\Eclipse\oop\sbt\bin\null\jre\lib\ext\jfxrt.jar;C:\Users\Haolun\.ivy2\cache\org.scalafx\scalafx_2.11\jars\scalafx_2.11-8.0.40-R8.jar;C:\Users\Haolun\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.8.jar;C:\Users\Haolun\.ivy2\cache\org.scalafx\scalafxml-core-sfx8_2.11\jars\scalafxml-core-sfx8_2.11-0.2.2.jar;C:\Users\Haolun\.ivy2\cache\org.scalafx\scalafxml-core-macros-sfx8_2.11\jars\scalafxml-core-macros-sfx8_2.11-0.2.2.jar;C:\Users\Haolun\.ivy2\cache\com.github.nscala-time\nscala-time_2.11\jars\nscala-time_2.11-2.12.0.jar;C:\Users\Haolun\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.3.jar;C:\Users\Haolun\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.2.jar;C:\Users\Haolun\.ivy2\cache\org.mongodb\casbah-commons_2.11\jars\casbah-commons_2.11-3.1.1.jar;C:\Users\Haolun\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-3.2.2.jar;C:\Users\Haolun\.ivy2\cache\org.mongodb\casbah-core_2.11\jars\casbah-core_2.11-3.1.1.jar;C:\Users\Haolun\.ivy2\cache\org.mongodb\casbah-query_2.11\jars\casbah-query_2.11-3.1.1.jar;C:\Users\Haolun\.ivy2\cache\org.mongodb\casbah-gridfs_2.11\jars\casbah-gridfs_2.11-3.1.1.jar;C:\Users\Haolun\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.3.jar;C:\Users\Haolun\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.3.jar;C:\Users\Haolun\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.7.jar[0m
-[0m[[0mdebug[0m] [0mScala compilation took 6.103395601 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 1.606156626 s[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidating (transitively) by inheritance from E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala...[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Invalidated by transitive inheritance dependency: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] The E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m[naha] 	bankAccount_=, bankaccount, bankaccount_=, bankAccount.[0m
+[0m[[0mdebug[0m] [0m[naha] All member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0m[naha] The following modified names cause invalidation of E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala: Set(bankAccount_=, bankaccount_=, bankAccount)[0m
 [0m[[0mdebug[0m] [0m[naha] New invalidations:[0m
-[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
-[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Initial set of included nodes: Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala)[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountSoloviewController.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\BankAccount.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\MainApp.scala[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\BasicBankAccount.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\BankAccount.scala[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountOverviewController.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\BasicBankAccount.scala[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountEditDialogController.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\BasicBankAccount.scala[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\PrivilegeBankAccount.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\BankAccount.scala[0m
+[0m[[0mdebug[0m] [0m[naha] Including E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountTransactionController.scala by E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\model\BankAccount.scala[0m
 [0m[[0mdebug[0m] [0m[naha] Previously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0mdebug[0m] [0m[naha] 	Set()[0m
+[0m[[0mdebug[0m] [0m[naha] 	Set(E:\Eclipse\oop\sbt\bin\src\main\scala\ch\makery\address\view\BankAccountDeleteDialogController.scala)[0m
 [0m[[0mdebug[0m] [0m[naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

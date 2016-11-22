@@ -49,19 +49,22 @@ class BankAccountOverviewController(
   
   // Bank Account Delete
   def handleDeleteAccount(action: ActionEvent) = {
+    val selectedBankAccount = bankAccountTable.selectionModel().selectedItem.value
+    val selectedBankAccountIndex = bankAccountTable.selectionModel().selectedIndex.value
+    val okClicked = MainApp.showBankAccountDeleteDialog(selectedBankAccount)
     
-    val selectedBankAccount = bankAccountTable.selectionModel().selectedIndex.value
-    if (MainApp.bankAccountData.length != 0){
-      bankAccountTable.items().remove(selectedBankAccount)
+    if (MainApp.bankAccountData.length != 0 && okClicked) {
+      val querydelete = MongoDBObject("accountNum" -> selectedBankAccount.accountNum.value)
+      val remove = MainApp.bankAccountCollection.remove(querydelete)
+      bankAccountTable.items().remove(selectedBankAccountIndex)
     } else {
       val alert = new Alert(Alert.AlertType.Warning){
-        initOwner(MainApp.stage)
+      initOwner(MainApp.stage)
         title = "No Bank Account Selected"
         headerText = "No Bank Account Selected"
         contentText = "Please select a bank account from the list of account."
       }.showAndWait()
     }
-    
   }
   
   // Bank Account Edit
